@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header img.profile-img {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+main#chat {
+  flex: 1;
+  background: url(../../../images/chat-bg-pattern.jpg) center/cover;
+  display: flex;
+  padding-block: 4px;
+}
+main#chat .container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  max-height: calc(100vh - 163px);
+  overflow-y: auto;
+  align-self: end;
+  gap: 1rem;
+}
+main#chat .message {
+  padding: 1rem;
+  background-color: #f0f;
+  display: inline-block;
+  border-radius: 12px;
+  max-width: 400px;
+  position: relative;
+}
+main#chat .message .time {
+  font-size: 0.5em;
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+}
+main#chat .message.from-me {
+  align-self: end;
+  border-bottom-right-radius: 0;
+}
+main#chat .message.for-me {
+  border-bottom-left-radius: 0;
+}
+
+footer ::-moz-placeholder {
+  color: var(--bs-gray-500) !important;
+}
+
+footer :-ms-input-placeholder {
+  color: var(--bs-gray-500) !important;
+}
+
+footer ::placeholder {
+  color: var(--bs-gray-500) !important;
+}/*# sourceMappingURL=chat.css.map */
