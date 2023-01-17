@@ -4,9 +4,7 @@ const chatList = document.querySelector("#chat-list");
 
 let userId = localStorage.userId;
 
-if (!userId) {
-  window.location.replace("./login.html");
-}
+if (!userId) window.location.replace("./login.html");
 
 users.forEach((u) => {
   if (u.id + "" !== userId + "") {

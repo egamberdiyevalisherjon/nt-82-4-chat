@@ -3,6 +3,10 @@ import users from "../data/users.js";
 const form = document.querySelector("#login-form");
 const nameSelect = document.querySelector("#name-select");
 
+let userId = localStorage.getItem("userId");
+
+if (userId) location.replace("./chat-list.html");
+
 users.forEach((user) => {
   let option = document.createElement("option");
   option.setAttribute("value", user.id);
@@ -31,5 +35,5 @@ form.addEventListener("submit", (e) => {
   }
 
   localStorage.userId = id;
-  window.location.replace("./chat-list.html")
+  window.location.replace("./chat-list.html");
 });
